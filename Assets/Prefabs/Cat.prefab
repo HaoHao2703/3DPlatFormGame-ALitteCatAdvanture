@@ -1372,7 +1372,7 @@ GameObject:
   - component: {fileID: 1240780309847709166}
   - component: {fileID: 1240780309847709153}
   - component: {fileID: 1240780309847709152}
-  - component: {fileID: 1240780309847709167}
+  - component: {fileID: 1821047176}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Player
@@ -1541,7 +1541,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1240780309847709167
+--- !u!114 &1821047176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1553,9 +1553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57df762b89b99144cb02d133106fd3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectCoin: {fileID: 8300000, guid: f7d7bf9f65f0d6b498f87e648c3483dc, type: 3}
-  deadSound: {fileID: 8300000, guid: 08a4ea993ab3dab48a1c28d90ec5190c, type: 3}
-  catSound: {fileID: 8300000, guid: cb7a52b3f4fc88845af7a5bddf344ee7, type: 3}
+  collectCoin: {fileID: 0}
+  deadSound: {fileID: 0}
+  catSound: {fileID: 0}
   levelCompleText: {fileID: 0}
   restartToMainMenuButton: {fileID: 0}
 --- !u!1 &7075908670013637948

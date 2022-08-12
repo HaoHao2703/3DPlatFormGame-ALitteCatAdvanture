@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private float jumpForce = 9;
     private bool isGrounded = false;
     private int coinValue = 1;
+    private bool levelComplete = false;
 
     private Vector3 moveDir;
     private Rigidbody playerRb;
@@ -41,10 +42,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleMovement();
-        HandleAnimation();
-        HandleAudio();
-
+        if (!levelComplete)
+        {
+            HandleMovement();
+            HandleAnimation();
+            HandleAudio();
+        }
     }
 
     void PlayCatSound()
@@ -82,8 +85,6 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
-
-
     }
 
     void HandleAnimation()
@@ -105,10 +106,12 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
 
+        //Check level complete
         if (col.gameObject.CompareTag("CheckPoint") && FlowersManager.flowerAmount == 5)
         {
             levelCompleText.gameObject.SetActive(true);
             restartToMainMenuButton.gameObject.SetActive(true);
+            levelComplete = true;
         }
 
     }
@@ -125,7 +128,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("DeadZone"))
         {
-            playerAudio.PlayOneShot(catSound, 0.1f);
+            playerAudio.PlayOneShot(catSound, 0.5f);
         }
 
         if (other.gameObject.CompareTag("DamageZone"))

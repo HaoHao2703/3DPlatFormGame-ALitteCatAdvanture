@@ -19,8 +19,8 @@ public class MainMenuButton : MonoBehaviour
         LifeManager.livesAmount = 3;
         CoinsManager.coin = 0;
         FlowersManager.flowerAmount = 0;
-        //Scene 2 is Level 1
-        SceneManager.LoadScene(2);
+        //Scene 1 is level 01 preload scene
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()

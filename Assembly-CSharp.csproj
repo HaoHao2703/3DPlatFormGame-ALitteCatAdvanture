@@ -61,12 +61,12 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\CoinRotation.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\GameOverScripts.cs" />
     <Compile Include="Assets\Scripts\Level01\Level01DeadZone.cs" />
+    <Compile Include="Assets\Scripts\FlowersManager.cs" />
     <Compile Include="Assets\Scripts\LifeManager.cs" />
     <Compile Include="Assets\Scripts\Level01\PreloadLevel01.cs" />
     <Compile Include="Assets\Scripts\CoinsManager.cs" />
-    <Compile Include="Assets\Scripts\FlowersManager.cs" />
-    <Compile Include="Assets\Scripts\GameOverScripts.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
